@@ -9,7 +9,7 @@ public class MasterCard implements CreditCardHandler{
     }
 
     @Override
-    public String check(CreditCardEntry creditCardEntry) {
+    public String checkCreditCardType(CreditCardEntry creditCardEntry) {
       Long a =  creditCardEntry.getCardNumber();
       String number = a.toString();
       String result = "";
@@ -20,7 +20,7 @@ public class MasterCard implements CreditCardHandler{
            if (fDigit.equals("5") && number.length() == 16 && sDigit >= 1 && sDigit <= 5) {
                result = "Master Card";
            } else {
-               return nextHandler.check(creditCardEntry);
+               return nextHandler.checkCreditCardType(creditCardEntry);
            }
        }
        else {

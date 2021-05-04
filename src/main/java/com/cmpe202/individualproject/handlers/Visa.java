@@ -10,7 +10,7 @@ public class Visa implements CreditCardHandler{
     }
 
     @Override
-    public String check(CreditCardEntry creditCardEntry) {
+    public String checkCreditCardType(CreditCardEntry creditCardEntry) {
         Long a =  creditCardEntry.getCardNumber();
         String number = a.toString();
         String result = "";
@@ -20,7 +20,7 @@ public class Visa implements CreditCardHandler{
             result = "Visa Card";
         }
         else {
-            return nextHandler.check(creditCardEntry);
+            return nextHandler.checkCreditCardType(creditCardEntry);
         }
         return result;
     }

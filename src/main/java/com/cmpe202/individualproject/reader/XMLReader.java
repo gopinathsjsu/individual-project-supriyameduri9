@@ -27,6 +27,9 @@ public class XMLReader implements Reader {
         this.file = file;
     }
 
+    public XMLReader() {
+    }
+
     @Override
     public List<CreditCardEntry> read(String inputFile) {
         System.out.println("Inside xml reader function");
@@ -56,7 +59,7 @@ public class XMLReader implements Reader {
 
                     String nameCardHolder = element.getElementsByTagName("NameOfCardholder").item(0).getTextContent();
 
-                    System.out.println("card number is " + cardNumber + " Expiration date is " + eDate + " name of card holder is " + nameCardHolder);
+                    //   System.out.println("card number is " + cardNumber + " Expiration date is " + eDate + " name of card holder is " + nameCardHolder);
 
                     CreditCardEntry ccEntry = new CreditCardEntry(cardNumber, eDate, nameCardHolder);
                     result.add(ccEntry);

@@ -10,7 +10,7 @@ public class Amex implements CreditCardHandler{
     }
 
     @Override
-    public String check(CreditCardEntry creditCardEntry) {
+    public String checkCreditCardType(CreditCardEntry creditCardEntry) {
         Long a =  creditCardEntry.getCardNumber();
         String number = a.toString();
         String result = "";
@@ -18,10 +18,10 @@ public class Amex implements CreditCardHandler{
         int sDigit = Integer.parseInt(number.substring(1,2));
 
         if(fDigit.equals("3") && number.length() == 15 && (sDigit == 4 || sDigit == 7)) {
-            result = "Amex";
+            result = "American Express Card";
         }
         else {
-            return nextHandler.check(creditCardEntry);
+            return nextHandler.checkCreditCardType(creditCardEntry);
         }
         return result;
     }

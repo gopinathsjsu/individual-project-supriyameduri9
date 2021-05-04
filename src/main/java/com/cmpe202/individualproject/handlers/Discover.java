@@ -8,7 +8,7 @@ public class Discover implements CreditCardHandler{
     public Discover() { }
 
     @Override
-    public String check(CreditCardEntry creditCardEntry) {
+    public String checkCreditCardType(CreditCardEntry creditCardEntry) {
         Long a =  creditCardEntry.getCardNumber();
         String number = a.toString();
         String result = "";
@@ -17,7 +17,7 @@ public class Discover implements CreditCardHandler{
         int sDigit = Integer.parseInt(number.substring(1,2));
 
         if(fourDigit.equals("6011") && number.length() == 16) {
-            result = "Discover";
+            result = "Discover Card";
         }
         else {
             result = "No Matching Credit Card Type";

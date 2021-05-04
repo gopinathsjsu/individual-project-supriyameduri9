@@ -19,6 +19,9 @@ import java.util.*;
 public class JSONReader implements Reader {
     File file;
 
+    public JSONReader() {
+    }
+
     public JSONReader(File file) {
         this.file = file;
     }
@@ -28,7 +31,7 @@ public class JSONReader implements Reader {
         FileReader fr;
         List<CreditCardEntry> result = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
-        String jsonFile = file.getAbsolutePath();
+//        String jsonFile = file.getAbsolutePath();
         List<String> cardDetails;
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         Date expDate = new Date();
