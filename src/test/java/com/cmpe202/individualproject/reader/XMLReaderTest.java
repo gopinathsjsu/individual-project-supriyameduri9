@@ -13,7 +13,7 @@ class XMLReaderTest {
     void checkReadXml() {
         XMLReader xmlReaderObj = new XMLReader();
             String filePath = "src/test/java/sampleFiles/inputxmlcopy.xml";
-            List<CreditCardEntry> result = xmlReaderObj.read(filePath);
+            List<CreditCardEntry> result = xmlReaderObj.readFile(filePath);
             String name = result.get(0).getNameOfCardholder();
             Long cardNumber = result.get(0).getCardNumber();
             Assert.assertEquals(name, "Alice");

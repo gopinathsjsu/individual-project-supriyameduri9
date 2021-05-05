@@ -26,7 +26,7 @@ public class CSVReader implements Reader {
     }
 
     @Override
-    public List<CreditCardEntry> read(String inputFile) {
+    public List<CreditCardEntry> readFile(String inputFile) {
 
         BufferedReader br;
         List<CreditCardEntry> result = new ArrayList<>();

@@ -50,15 +50,15 @@ public class App {
         if (fileType.equalsIgnoreCase("csv")) {
             filereader = new CSVReader(new File(inputFile));
             filewriter = new CSVWriter();
-            creditCardEntries = filereader.read(inputFile);
+            creditCardEntries = filereader.readFile(inputFile);
         } else if (fileType.equalsIgnoreCase("json")) {
             filereader = new JSONReader(new File(inputFile));
             filewriter = new JSONWriter();
-            creditCardEntries = filereader.read(inputFile);
+            creditCardEntries = filereader.readFile(inputFile);
         } else if (fileType.equalsIgnoreCase("xml")) {
             filereader = new XMLReader(new File(inputFile));
             filewriter = new XMLWriter();
-            creditCardEntries = filereader.read(inputFile);
+            creditCardEntries = filereader.readFile(inputFile);
         }
 
         //for loop on creditCardEntries

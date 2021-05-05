@@ -31,7 +31,7 @@ public class XMLReader implements Reader {
     }
 
     @Override
-    public List<CreditCardEntry> read(String inputFile) {
+    public List<CreditCardEntry> readFile(String inputFile) {
         System.out.println("Inside xml reader function");
         List<CreditCardEntry> result = new ArrayList<>();
         File fileReader;

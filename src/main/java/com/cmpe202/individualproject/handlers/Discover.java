@@ -20,7 +20,7 @@ public class Discover implements CreditCardHandler{
             result = "Discover Card";
         }
         else {
-            result = "No Matching Credit Card Type";
+            result = "ERROR !! Card is Invalid";
         }
         return result;
     }

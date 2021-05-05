@@ -27,7 +27,7 @@ public class JSONReader implements Reader {
     }
 
     @Override
-    public List<CreditCardEntry> read(String inputFile) {
+    public List<CreditCardEntry> readFile(String inputFile) {
         FileReader fr;
         List<CreditCardEntry> result = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();

@@ -21,6 +21,8 @@ public class JSONWriter implements Writer{
 
     public void writeToFile(List<OutputEntry> result, String outputFile) {
         FileWriter fileWriter ;
+        int resultSize = result.size();
+        int counter=0;
         try {
             fileWriter = new FileWriter(outputFile);
             fileWriter.write("[");
@@ -31,9 +33,13 @@ public class JSONWriter implements Writer{
                 fileWriter.write('\n');
                 fileWriter.write("\"Card Number\": " + each.getCardNumber() + ",");
                 fileWriter.write('\n');
-                fileWriter.write("\"Card Type\": " + "\"" + each.getType() + "\"" + " ,");
+                fileWriter.write("\"Card Type\": " + "\"" + each.getType() + "\"");
                 fileWriter.write('\n');
                 fileWriter.write("}");
+                if (counter < resultSize-1) {
+                    fileWriter.write(",");
+                }
+                counter++;
             }
 
             fileWriter.write("\n");

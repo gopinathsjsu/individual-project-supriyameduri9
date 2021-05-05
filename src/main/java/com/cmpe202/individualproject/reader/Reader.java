@@ -8,7 +8,7 @@ import com.cmpe202.individualproject.main.CreditCardEntry;
 
 public interface Reader {
 	
-	 List<CreditCardEntry> read(String inputFile) ;
+	 List<CreditCardEntry> readFile(String inputFile) ;
 		// TODO Auto-generated method stub
 
 }
