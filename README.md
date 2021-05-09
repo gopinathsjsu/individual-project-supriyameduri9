@@ -13,6 +13,6 @@ mvn test
 mvn clean
 
 #### Refer "class diagram.png" file for class diagram 
-#### Refer "part1+part2.docx" file for class diagram 
+#### Refer "part1+part2.docx" file for part1 and part2 solutions 
 
 
