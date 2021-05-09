@@ -18,17 +18,16 @@ class XMLWriterTest {
         String cardType = "Master Card";
         XMLWriter xmlWriterObj = new XMLWriter();
         List<OutputEntry> result = new ArrayList<>();
-        result.add(new OutputEntry(cardNumber,cardType));
-        // OutputEntry result = new OutputEntry(cardNumber,cardType);
+        result.add(new OutputEntry(cardNumber, cardType));
         String path = "src/test/java/sampleFiles/json_output.json";
-        xmlWriterObj.writeToFile(result,path);
+        xmlWriterObj.writeToFile(result, path);
 
         File file = new File(path);
 
-        Assert.assertEquals(file.exists(),true);
+        Assert.assertEquals(file.exists(), true);
 
         Assert.assertEquals((long) cardNumber, 5410000000000000L);
-        Assert.assertEquals(cardType,"Master Card");
+        Assert.assertEquals(cardType, "Master Card");
 
     }
 

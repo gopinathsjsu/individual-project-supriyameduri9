@@ -11,15 +11,15 @@ class AppTest {
         String inputFile = "src/test/java/sampleFiles/inputxmlcopy.xml";
         App appObj = new App();
         String result = appObj.getFileType(inputFile);
-        Assert.assertEquals(result,"xml");
+        Assert.assertEquals(result, "xml");
     }
+
     @Test
     void checkInvalidFileType() {
         String inputFile = "src/test/java/sampleFiles/inputxmlcopy.xml";
         App appObj = new App();
         String result = appObj.getFileType(inputFile);
-      //  Assert.assertEquals(result,"json");
-        Assert.assertNotEquals(result,"json");
+        Assert.assertNotEquals(result, "json");
     }
 
 }

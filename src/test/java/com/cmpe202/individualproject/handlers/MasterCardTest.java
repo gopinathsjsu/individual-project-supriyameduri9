@@ -18,6 +18,7 @@ class MasterCardTest {
         String result = masterCardObj.checkCreditCardType(creditCardEntry);
         Assertions.assertEquals(result, "Master Card");
     }
+
     @Test
     void checkInvalidMasterCard() {
         Long cardNumber = 6011000000000000L;

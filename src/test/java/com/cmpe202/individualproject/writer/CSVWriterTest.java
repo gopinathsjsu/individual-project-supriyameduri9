@@ -18,15 +18,14 @@ class CSVWriterTest {
         String cardType = "Master Card";
         CSVWriter csvWriterObj = new CSVWriter();
         List<OutputEntry> result = new ArrayList<>();
-        result.add(new OutputEntry(cardNumber,cardType));
-        // OutputEntry result = new OutputEntry(cardNumber,cardType);
+        result.add(new OutputEntry(cardNumber, cardType));
         String path = "src/test/java/sampleFiles/json_output.json";
-        csvWriterObj.writeToFile(result,path);
+        csvWriterObj.writeToFile(result, path);
         File file = new File(path);
 
-        Assert.assertEquals(file.exists(),true);
+        Assert.assertEquals(file.exists(), true);
         Assert.assertEquals((long) cardNumber, 5410000000000000L);
-        Assert.assertEquals(cardType,"Master Card");
+        Assert.assertEquals(cardType, "Master Card");
 
     }
 }

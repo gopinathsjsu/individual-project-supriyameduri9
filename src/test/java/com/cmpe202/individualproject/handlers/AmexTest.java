@@ -13,22 +13,23 @@ class AmexTest {
     @Test
     void checkValidAmex() {
         Long cardNumber = 341000000000000L;
-        LocalDate expDate = LocalDate.of(2030,3,20);
+        LocalDate expDate = LocalDate.of(2030, 3, 20);
         String name = "eve";
-        CreditCardEntry creditCardEntry = new CreditCardEntry(cardNumber,expDate,name);
+        CreditCardEntry creditCardEntry = new CreditCardEntry(cardNumber, expDate, name);
         Amex amexObj = new Amex();
         String result = amexObj.checkCreditCardType(creditCardEntry);
-        Assertions.assertEquals(result,"American Express Card");
+        Assertions.assertEquals(result, "American Express Card");
     }
+
     @Test
     void checkInvalidAmex() {
         Long cardNumber = 6011000000000000L;
-        LocalDate expDate = LocalDate.of(2030,3,20);
+        LocalDate expDate = LocalDate.of(2030, 3, 20);
         String name = "eve";
-        CreditCardEntry creditCardEntry = new CreditCardEntry(cardNumber,expDate,name);
+        CreditCardEntry creditCardEntry = new CreditCardEntry(cardNumber, expDate, name);
         Amex amexObj = new Amex();
         String result = amexObj.checkCreditCardType(creditCardEntry);
-        Assertions.assertNotEquals(result,"American Express Card");
+        Assertions.assertNotEquals(result, "American Express Card");
     }
 
 }
