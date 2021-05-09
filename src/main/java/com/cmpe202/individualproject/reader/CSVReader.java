@@ -47,7 +47,6 @@ public class CSVReader implements Reader {
 
                 String nameOfCardHolder = entries[2];
 
-                //	System.out.println("Card Number " + cardNumber + " Expiration Date " + edate + " Name Of Card Holder " + nameOfCardHolder);
                 CreditCardEntry ccEntry = new CreditCardEntry(cardNumber, edate, nameOfCardHolder);
                 result.add(ccEntry);
             }

@@ -11,7 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-public class JSONWriter implements Writer{
+public class JSONWriter implements Writer {
     File outputFile;
 
     public JSONWriter() {
@@ -20,13 +20,12 @@ public class JSONWriter implements Writer{
     @Override
 
     public void writeToFile(List<OutputEntry> result, String outputFile) {
-        FileWriter fileWriter ;
+        FileWriter fileWriter;
         int resultSize = result.size();
-        int counter=0;
+        int counter = 0;
         try {
             fileWriter = new FileWriter(outputFile);
             fileWriter.write("[");
-           // fileWriter.write('\n');
             for (OutputEntry each : result) {
                 fileWriter.write("\n");
                 fileWriter.write("{");
@@ -36,7 +35,7 @@ public class JSONWriter implements Writer{
                 fileWriter.write("\"Card Type\": " + "\"" + each.getType() + "\"");
                 fileWriter.write('\n');
                 fileWriter.write("}");
-                if (counter < resultSize-1) {
+                if (counter < resultSize - 1) {
                     fileWriter.write(",");
                 }
                 counter++;
@@ -45,7 +44,6 @@ public class JSONWriter implements Writer{
             fileWriter.write("\n");
             fileWriter.write("]");
             fileWriter.close();
-           // System.out.println("Done");
         } catch (IOException e) {
             e.printStackTrace();
         }

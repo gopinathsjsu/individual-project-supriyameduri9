@@ -63,8 +63,7 @@ public class JSONReader implements Reader {
                 DateTimeFormatter df = DateTimeFormatter.ofPattern("M/dd/yyyy");
                 LocalDate eDate = LocalDate.parse(b, df);
 
-                System.out.println("cnumber is " + cNumber + " eDate is " + eDate + " name is " + name);
-                result.add(new CreditCardEntry(cNumber,eDate,name));
+                result.add(new CreditCardEntry(cNumber, eDate, name));
             }
         } catch (Exception e) {
             e.printStackTrace();

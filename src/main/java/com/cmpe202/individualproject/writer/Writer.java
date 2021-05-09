@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface Writer {
 
-    public void writeToFile(List<OutputEntry> result , String outputFile);
+    public void writeToFile(List<OutputEntry> result, String outputFile);
 }
 

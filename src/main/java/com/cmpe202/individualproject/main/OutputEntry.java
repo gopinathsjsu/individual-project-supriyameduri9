@@ -4,7 +4,8 @@ public class OutputEntry {
     Long cardNumber;
     String type;
 
-    public OutputEntry() { }
+    public OutputEntry() {
+    }
 
     public OutputEntry(Long cardNumber, String type) {
         this.cardNumber = cardNumber;

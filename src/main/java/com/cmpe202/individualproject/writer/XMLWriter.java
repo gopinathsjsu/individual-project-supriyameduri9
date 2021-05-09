@@ -59,8 +59,6 @@ public class XMLWriter implements Writer {
 
             transformer.transform(source, console);
             transformer.transform(source, file);
-           // System.out.println("DONE");
-
         } catch (Exception e) {
             e.printStackTrace();
         }

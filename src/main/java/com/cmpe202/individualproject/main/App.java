@@ -45,7 +45,6 @@ public class App {
         } else {
             System.out.println("Input and output extensions " + inputFileType + " and " + outputFileType + " are same");
         }
-
         String fileType = getFileType(inputFile);
         if (fileType.equalsIgnoreCase("csv")) {
             filereader = new CSVReader(new File(inputFile));

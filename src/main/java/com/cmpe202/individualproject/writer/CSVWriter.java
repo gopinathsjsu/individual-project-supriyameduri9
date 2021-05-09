@@ -19,7 +19,7 @@ public class CSVWriter implements Writer {
 
     @Override
     public void writeToFile(List<OutputEntry> result, String outputFile) {
-        FileWriter fileWriter = null ;
+        FileWriter fileWriter = null;
         String File_header = "CardNumber,CardType";
         try {
             fileWriter = new FileWriter(outputFile);
@@ -33,15 +33,10 @@ public class CSVWriter implements Writer {
                 fileWriter.flush();
 
             }
-
-          //  fileWriter.close();
-           System.out.println("Done");
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
-
                 fileWriter.close();
             } catch (IOException e) {
                 e.printStackTrace();
