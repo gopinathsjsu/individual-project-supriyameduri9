@@ -9,6 +9,7 @@ public class Discover implements CreditCardHandler{
 
     @Override
     public String checkCreditCardType(CreditCardEntry creditCardEntry) {
+        System.out.println("inside discover");
         Long a =  creditCardEntry.getCardNumber();
         String number = a.toString();
         String result = "";
@@ -22,6 +23,7 @@ public class Discover implements CreditCardHandler{
         else {
             result = "ERROR !! Card is Invalid";
         }
+        System.out.println("Result in discover creditcard: " + result);
         return result;
     }
 }

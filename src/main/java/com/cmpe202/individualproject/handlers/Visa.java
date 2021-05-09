@@ -20,6 +20,8 @@ public class Visa implements CreditCardHandler{
             result = "Visa Card";
         }
         else {
+            System.out.println("calling amex");
+
             return nextHandler.checkCreditCardType(creditCardEntry);
         }
         return result;

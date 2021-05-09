@@ -2,5 +2,17 @@
 {
 "Card Number": 5410000000000000,
 "Card Type": "Master Card"
+},
+{
+"Card Number": 4120000000000,
+"Card Type": "Visa Card"
+},
+{
+"Card Number": 341000000000000,
+"Card Type": "American Express Card"
+},
+{
+"Card Number": 6011000000000000,
+"Card Type": "Discover Card"
 }
 ]

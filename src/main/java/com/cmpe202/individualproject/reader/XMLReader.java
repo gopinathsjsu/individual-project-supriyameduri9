@@ -32,7 +32,7 @@ public class XMLReader implements Reader {
 
     @Override
     public List<CreditCardEntry> readFile(String inputFile) {
-        System.out.println("Inside xml reader function");
+      //  System.out.println("Inside xml reader function");
         List<CreditCardEntry> result = new ArrayList<>();
         File fileReader;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("M/dd/yyyy");
@@ -58,8 +58,7 @@ public class XMLReader implements Reader {
                     LocalDate eDate = LocalDate.parse(a, dtf);
 
                     String nameCardHolder = element.getElementsByTagName("NameOfCardholder").item(0).getTextContent();
-
-                    //   System.out.println("card number is " + cardNumber + " Expiration date is " + eDate + " name of card holder is " + nameCardHolder);
+                    //System.out.println("card number is " + cardNumber + " Expiration date is " + eDate + " name of card holder is " + nameCardHolder);
 
                     CreditCardEntry ccEntry = new CreditCardEntry(cardNumber, eDate, nameCardHolder);
                     result.add(ccEntry);

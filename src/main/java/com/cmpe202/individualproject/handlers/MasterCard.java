@@ -10,18 +10,23 @@ public class MasterCard implements CreditCardHandler{
 
     @Override
     public String checkCreditCardType(CreditCardEntry creditCardEntry) {
-      Long a =  creditCardEntry.getCardNumber();
+        System.out.println("checkcredittype-mastercard");
+
+        Long a =  creditCardEntry.getCardNumber();
       String number = a.toString();
       String result = "";
 
-        if(number.length() <= 19 && number.length() > 0) {
-           String fDigit = number.substring(0, 1);
-           int sDigit = Integer.parseInt(number.substring(1,2));
-           if (fDigit.equals("5") && number.length() == 16 && sDigit >= 1 && sDigit <= 5) {
-               result = "Master Card";
-           } else {
-               return nextHandler.checkCreditCardType(creditCardEntry);
-           }
+        if(number.length() <= 19 && number.length() > 0  ) {
+                System.out.println("checkcredittype-mastercard");
+                String fDigit = number.substring(0, 1);
+                int sDigit = Integer.parseInt(number.substring(1, 2));
+                if (fDigit.equals("5") && sDigit >= 1 && sDigit <= 5 && number.length() == 16) {
+                    result = "Master Card";
+                }
+            else {
+                   System.out.println("calling visa");
+                   return nextHandler.checkCreditCardType(creditCardEntry);
+            }
        }
        else {
            System.out.println("Invalid card type!");

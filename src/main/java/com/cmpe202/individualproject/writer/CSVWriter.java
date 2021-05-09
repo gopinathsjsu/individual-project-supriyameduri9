@@ -31,8 +31,11 @@ public class CSVWriter implements Writer {
                 fileWriter.append(each.getType());
                 fileWriter.append('\n');
                 fileWriter.flush();
+
             }
-            System.out.println("Done");
+
+          //  fileWriter.close();
+           System.out.println("Done");
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -45,7 +45,7 @@ public class JSONWriter implements Writer{
             fileWriter.write("\n");
             fileWriter.write("]");
             fileWriter.close();
-            System.out.println("Done");
+           // System.out.println("Done");
         } catch (IOException e) {
             e.printStackTrace();
         }

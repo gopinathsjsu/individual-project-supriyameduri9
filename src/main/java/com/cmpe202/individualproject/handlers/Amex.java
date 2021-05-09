@@ -21,6 +21,7 @@ public class Amex implements CreditCardHandler{
             result = "American Express Card";
         }
         else {
+            System.out.println("calling discover");
             return nextHandler.checkCreditCardType(creditCardEntry);
         }
         return result;
