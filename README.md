@@ -1,4 +1,5 @@
 # individual-project-supriyameduri9
+
 ##individual-project-supriyameduri9 created by GitHub Classroom
 
 ### Command to Run the project 
@@ -10,4 +11,8 @@ mvn test
 
 ### Command to recompile the project:
 mvn clean
+
+#### Refer "class diagram.png" file for class diagram 
+#### Refer "part1+part2.docx" file for class diagram 
+
 
